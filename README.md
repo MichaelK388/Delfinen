@@ -17,20 +17,19 @@ Et CRUD-program til en Delfinen – 1. semester, datamatiker, EK.
 
 | User story | Beskrivelse | Udført |
 |------------|-------------|--------|
-| US1        |Som filmentusiast vil jeg kunne tilføje en film til min filmsamling, så jeg har en liste over alle mine film.| Ja     |
-| US2        |Som filmentusiast vil jeg have en menu, så jeg kan vælge, hvad jeg vil gøre – og blive ved, indtil jeg selv vælger at stoppe.| Ja     |
-| US3        |Som filmentusiast vil jeg kunne se alle film i samlingen, så jeg får et overblik.| Ja     |
-| US4        |Som filmentusiast vil jeg kunne søge efter film på titel, så jeg hurtigt kan finde en bestemt film.| Ja     |
-| US5        |Som filmentusiast vil jeg kunne rette oplysningerne om en film, så samlingen altid passer med det, jeg ved.| Ja     |
-| US6        |Som filmentusiast vil jeg kunne slette en film, så samlingen kun indeholder film, jeg stadig vil holde styr på.| Ja     |
-| US7        |Som udvikler vil jeg have automatiske tests af programmets logik, så vi hurtigt kan se, om en ændring har ødelagt noget.| Ja     |
-| US8        |Som filmentusiast vil jeg kunne markere, at jeg har set en film, så jeg kan huske, hvornår jeg sidst så den.| Ja     |
-| US9        |Som filmentusiast vil jeg kunne finde de film, jeg ikke har set længe, så jeg har noget at vælge imellem, når jeg vil se en film i aften.| Ja     |
-| US10       |Som filmentusiast vil jeg have, at programmet ikke går ned, når jeg kommer til at skrive forkert, så jeg ikke mister mit arbejde.| Ja     |
-| US11       |Som filmentusiast vil jeg have, at programmet afviser oplysninger, der ikke kan passe, så min samling ikke fyldes med fejl.| Ja     |
-| US12       |Som filmentusiast vil jeg kunne skrive, hvilken dag jeg så en film, så jeg også kan registrere film, jeg så i sidste uge.| Ja     |
-| US13       |Som filmentusiast vil jeg have, at min filmsamling bliver gemt, så jeg ikke skal taste den ind igen, hver gang jeg starter programmet.| Ja     |
-| US14       |Som udvikler vil jeg kun skrive filen, når data er ændret, så programmet ikke laver unødigt arbejde.| Ja     |
-| US15       |Som udvikler vil jeg have koden delt i packages efter lag, så det er tydeligt, hvilke klasser der hører til brugerfladen, domænet og data – og så en ny udvikler hurtigt kan finde rundt.| Ja     |
-| US16       |Som filmentusiast vil jeg se mine film i alfabetisk orden, så jeg hurtigt kan finde en bestemt film i listen.| Ja     |
-| US17       |Som filmentusiast vil jeg selv kunne vælge, hvad filmene sorteres efter, så jeg kan se samlingen på den måde, der passer mig lige nu.| Ja     |
+| US1        |Som formand vil jeg kunne oprette et nyt medlem med navn, fødselsdato og medlemsform, så klubben kan registrere nye medlemmer.
+| Nej     |
+| US2        |Som formand vil jeg kunne se en liste over alle medlemmer, så jeg kan få et samlet overblik over klubbens medlemmer.| Nej     |
+| US3        |Som kasserer vil jeg kunne se hvert medlems årlige kontingent, så jeg kan holde styr på, hvad medlemmerne skal betale.| Nej     |
+| US4        |Som kasserer vil jeg kunne se den samlede forventede kontingentindtægt, så jeg kan få overblik over klubbens forventede indtægter.
+| Nej     |
+| US5        |Som kasserer vil jeg kunne registrere, at et medlem har betalt sit kontingent, så jeg kan holde styr på, hvem der har betalt.| Nej     |
+| US6        |Som kasserer vil jeg kunne se en liste over medlemmer i restance, så jeg kan følge op på manglende kontingentbetalinger.
+| Nej     |
+| US7        |Som træner vil jeg kunne se klubbens junior- og seniorhold hver for sig, så jeg kan få overblik over konkurrencesvømmerne.| Nej     |
+| US8        |Som træner vil jeg kunne registrere en svømmers træningstid i en disciplin, så jeg kan følge svømmerens udvikling.| Nej     |
+| US9        |Som træner vil jeg kunne registrere en konkurrencesvømmers stævneresultat, så klubbens resultater fra konkurrencer bliver gemt.| Nej     |
+| US10       |Som træner vil jeg kunne se en konkurrencesvømmers trænings- og stævneresultater, så jeg kan følge svømmerens præstationer.
+| Nej     |
+| US11       |Som træner vil jeg kunne se de fem hurtigste svømmere i en valgt disciplin, så jeg kan vurdere, hvilke svømmere der præsterer bedst.| Nej     |
+| US12       |Som bruger vil jeg have, at klubbens oplysninger gemmes og indlæses automatisk, så mine registreringer ikke går tabt, når programmet lukkes.| Nej     |
