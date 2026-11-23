@@ -21,11 +21,11 @@ public class UserInterface {
 
             switch (choice) {
                 case 1:
-                    System.out.println("Funktion 1 valgt");
+                    System.out.println("Opret medlem");
                     break;
 
                 case 2:
-                    System.out.println("Funktion 2 valgt");
+                    System.out.println("Vis alle medlemmer");
                     break;
 
                 case 0:
@@ -42,9 +42,9 @@ public class UserInterface {
     private void printMenu() {
         System.out.println();
         System.out.println("=== MENU ===");
-        System.out.println("1. Funktion 1");
-        System.out.println("2. Funktion 2");
-        System.out.println("0. Afslut");
+        System.out.println("1.Opret medlem");
+        System.out.println("2.Vis alle medlemmer");
+        System.out.println("0.Afslut");
         System.out.print("Vælg: ");
     }
 }
