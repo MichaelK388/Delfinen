@@ -3,11 +3,14 @@ import service.MemberCreation;
 import ui.UserInterface;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.ArrayList;
 
 public class Main {
     public static void main(String[] args) {
 
-        UserInterface userInterface = new UserInterface();
+        List<Member> members = new ArrayList<>();
+
+        UserInterface userInterface = new UserInterface(members);
         userInterface.startProgram();
 
                 // Test oprettelse af et medlem for at se om det virker
