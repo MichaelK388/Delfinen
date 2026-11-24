@@ -1,6 +1,7 @@
 package domain;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.List;
 
 public class Member {
@@ -41,5 +42,19 @@ public class Member {
 
     public List<Discipline> getDisciplines() {
         return disciplines;
+    }
+    public int getAge(LocalDate date) {return Period.between(birthDate, date).getYears();}
+    public double calculateMembershipFee(LocalDate date) {
+        if (membershipType == MembershipType.PASSIVE){
+            return 500;
+        }
+        int age = getAge(date);
+        if (age < 18){
+            return 1000;
+        }
+        if (age >= 60){
+            return 1200;
+        }
+        return 1600;
     }
 }
