@@ -12,6 +12,7 @@ public class Member {
     private MembershipType membershipType;
     private SwimmerType swimmerType;
     private List<Discipline> disciplines;
+    private boolean hasPaid;
 
     public Member(int memberNumber, String name, LocalDate birthDate, MembershipType membershipType, SwimmerType swimmerType, List<Discipline> disciplines) {
         this.memberNumber = memberNumber;
@@ -20,6 +21,7 @@ public class Member {
         this.membershipType = membershipType;
         this.swimmerType = swimmerType;
         this.disciplines = disciplines;
+        this.hasPaid = false;
     }
 
     public int getMemberNumber(){
@@ -29,6 +31,10 @@ public class Member {
         return name;
     }
 
+    public boolean hasPaid(){ return hasPaid;}
+    public void setHasPaid(boolean hasPaid){
+        this.hasPaid = hasPaid;
+    }
     public LocalDate getBirthDate() {
         return birthDate;
     }
