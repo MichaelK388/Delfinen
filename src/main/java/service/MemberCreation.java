@@ -16,6 +16,11 @@ public class MemberCreation {
             SwimmerType swimmerType,
             List<Discipline> disciplines) {
 
+        if (swimmerType == SwimmerType.COMPETITION && (disciplines == null || disciplines.isEmpty())) {
+
+            throw new IllegalArgumentException("Konkurrence svømmere skal have mindst 1 disciplin.");
+        }
+
         Member member = new Member(
                 nextMemberNumber++,
                 name,
