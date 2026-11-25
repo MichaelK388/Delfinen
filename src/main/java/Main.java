@@ -23,12 +23,6 @@ public class Main {
         );
         FileHandler csvService = new FileHandler();
         csvService.saveMember(member);
-//
-//        System.out.println(member.getName());
-//        System.out.println(member.getMembershipType());
-//        System.out.println(member.getDisciplines());
-//        System.out.println(member.getSwimmerType());
-//        System.out.println(member.getBirthDate());
-//        System.out.println(member.getMemberNumber());
+
     }
 }
