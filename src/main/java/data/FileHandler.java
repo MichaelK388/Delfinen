@@ -1,10 +1,13 @@
 package data;
 import domain.Member;
+import domain.Discipline;
+import domain.MembershipType;
+import domain.SwimmerType;
 
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.io.File;
+import java.io.*;
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class FileHandler {
 
@@ -57,4 +60,49 @@ public class FileHandler {
             System.out.println("Fejl ved gemning: " + e.getMessage());
         }
     }
+    public List<Member> loadMembers() {
+
+        List<Member> members = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(FILE_NAME))) {
+
+            reader.readLine(); // spring header over
+
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+
+                String[] data = line.split(";");
+
+                int memberNumber = Integer.parseInt(data[0]);
+                String name = data[1];
+                LocalDate birthDate = LocalDate.parse(data[2]);
+
+                MembershipType membershipType =
+                        MembershipType.valueOf(data[3]);
+
+                SwimmerType swimmerType =
+                        SwimmerType.valueOf(data[4]);
+
+                List<Discipline> disciplines = new ArrayList<>();
+
+                Member member = new Member(
+                        memberNumber,
+                        name,
+                        birthDate,
+                        membershipType,
+                        swimmerType,
+                        disciplines
+                );
+
+                members.add(member);
+            }
+
+        } catch (IOException e) {
+            System.out.println("Fejl ved indlæsning: " + e.getMessage());
+        }
+
+        return members;
+    }
+
 }
