@@ -1,7 +1,10 @@
 package ui;
 import java.util.Scanner;
 import domain.Member;
+import domain.MembershipType;
+import domain.SwimmerType;
 import java.util.List;
+import java.time.LocalDate;
 
 public class UserInterface {
 
@@ -56,6 +59,24 @@ private void showAllMembers() {
         System.out.println("Medlemsnummer: " + member.getMemberNumber());
         System.out.println("Navn:          " + member.getName());
         System.out.println("Fødselsdato:   " + member.getBirthDate());
+        int age = member.getAge(LocalDate.now());
+        System.out.println("Alder:         " + age);
+        String memberCategory;
+            if (age < 18) {
+                memberCategory = "Junior";
+            } else {
+                memberCategory = "Senior";
+            }
+        System.out.println("Medlemstype:   " + memberCategory);
+            String activity;
+                if (member.getMembershipType() == MembershipType.PASSIVE) {
+                    activity = "Passivt medlem";
+                } else if (member.getSwimmerType() == SwimmerType.EXERCISE) {
+                    activity = "Motionssvømmer";
+                } else {
+                    activity = "Konkurrencesvømmer";
+                }
+        System.out.println("Aktivitetsform: " + activity);
         System.out.println("Medlemsform:   " + member.getMembershipType());
         System.out.println("Svømmetype:    " + member.getSwimmerType());
         System.out.println("Discipliner:   " + member.getDisciplines());
