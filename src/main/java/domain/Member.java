@@ -2,6 +2,7 @@ package domain;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Member {
@@ -12,6 +13,9 @@ public class Member {
     private MembershipType membershipType;
     private SwimmerType swimmerType;
     private List<Discipline> disciplines;
+
+    private List<TrainingResult> trainingResults = new ArrayList<>();
+    
     private boolean hasPaid;
 
     public Member(int memberNumber, String name, LocalDate birthDate, MembershipType membershipType, SwimmerType swimmerType, List<Discipline> disciplines) {
@@ -62,5 +66,24 @@ public class Member {
             return 1200;
         }
         return 1600;
+    }
+    public void addTrainingResult(TrainingResult result) {
+    trainingResults.add(result);
+    }
+    public List<TrainingResult> getTrainingResults() {
+    return trainingResults;
+    }
+    public TrainingResult getBestTrainingResult(Discipline discipline) {
+    TrainingResult bestResult = null;
+
+    for (TrainingResult result : trainingResults) {
+        if (result.getDiscipline() == discipline) {
+            if (bestResult == null ||
+                    result.getTimeInHundredths() < bestResult.getTimeInHundredths()) {
+                bestResult = result;
+            }
+        }
+    }
+    return bestResult;
     }
 }
