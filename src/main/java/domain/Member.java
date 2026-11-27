@@ -2,6 +2,7 @@ package domain;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Member {
@@ -13,6 +14,7 @@ public class Member {
     private SwimmerType swimmerType;
     private List<Discipline> disciplines;
     private boolean hasPaid;
+    private List<CompetitionResult> competitionResults;
 
     public Member(int memberNumber, String name, LocalDate birthDate, MembershipType membershipType, SwimmerType swimmerType, List<Discipline> disciplines) {
         this.memberNumber = memberNumber;
@@ -22,6 +24,7 @@ public class Member {
         this.swimmerType = swimmerType;
         this.disciplines = disciplines;
         this.hasPaid = false;
+        this.competitionResults = new ArrayList<>();
     }
 
     public int getMemberNumber(){
@@ -44,6 +47,11 @@ public class Member {
     }
     public SwimmerType getSwimmerType() {
         return swimmerType;
+    }
+
+    public List<CompetitionResult> getCompetitionResults(){return competitionResults;}
+    public void addCompetitionResult(CompetitionResult result) {
+        competitionResults.add(result);
     }
 
     public List<Discipline> getDisciplines() {
